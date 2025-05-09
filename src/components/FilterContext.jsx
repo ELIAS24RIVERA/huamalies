@@ -1,20 +1,21 @@
-// dependencies
-import React, { useState, createContext } from 'react';
+import { createContext, useState } from "react";
 
+// ✅ Primero declara el contexto
 export const FilterContext = createContext();
 
-export const FilterProvider = (props) => {
-	const [filter, setFilter] = useState({
-		checkIn: {},
-		checkOut: {},
-		country: "Todos los paises",
-		price: "Cualquier precio",
-		size: "Cualquier tamaño",
-	});
+// ✅ Luego lo usas en el proveedor
+const FilterProvider = ({ children }) => {
+  const [filters, setFilters] = useState({
+    country: "Todos los paises",
+    price: "Cualquier precio",
+    size: "Cualquier tamaño",
+  });
 
-	return (
-		<FilterContext.Provider value={[filter, setFilter]}>
-			{props.children}
-		</FilterContext.Provider>
-	);
+  return (
+    <FilterContext.Provider value={{ filters, setFilters }}>
+      {children}
+    </FilterContext.Provider>
+  );
 };
+
+export default FilterProvider;
