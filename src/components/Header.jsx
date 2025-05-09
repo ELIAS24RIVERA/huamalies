@@ -4,11 +4,12 @@ import Filters from './Filters';
 import FilterText from './FilterText';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 // ------------------ ESTILOS ------------------
 
 const MainContainer = styled.div`
   font-family: 'Open Sans', sans-serif;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   color: #333;
   background: #f0f2f5;

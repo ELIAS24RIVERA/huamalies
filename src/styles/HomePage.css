@@ -1,0 +1,220 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-container {
+  background: url('/imag/llata.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-container h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-container p {
+  font-size: 1.6rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.filter-container {
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #7d88ee, #6a75e0);
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: -60px auto 0;
+  position: relative;
+  z-index: 10;
+}
+
+.section {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #3498db;
+  bottom: -12px;
+  left: 20%;
+  border-radius: 2px;
+}
+
+.toggle-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-button:hover {
+  background: #2980b9;
+}
+
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.attraction-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attraction-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.attraction-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.attraction-card div {
+  padding: 1.5rem;
+}
+
+.attraction-card h3 {
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  font-size: 1.4rem;
+}
+
+.attraction-card p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.testimonials {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.testimonial-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.testimonial {
+  min-width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-content a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-content a:hover {
+  color: #fff;
+}
+
+.footer .copyright {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #34495e;
+  font-size: 0.9rem;
+  color: #95a5a6;
+}
