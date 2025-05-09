@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-// CORRECCIÓN: Cambiar estas rutas por las correctas (ejemplo suponiendo que están en la misma carpeta)
 import Filters from './Filters';
 import FilterText from './FilterText';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Estilos generales mejorados
+// ------------------ ESTILOS ------------------
+
 const MainContainer = styled.div`
   font-family: 'Open Sans', sans-serif;
   max-width: 1400px;
@@ -25,7 +25,6 @@ const HeroContainer = styled.section`
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   text-align: center;
   padding: 2rem;
-  position: relative;
 
   @media (max-width: 768px) {
     height: 60vh;
@@ -87,6 +86,21 @@ const Section = styled.section`
       left: 20%;
       border-radius: 2px;
     }
+  }
+`;
+
+const ToggleButton = styled.button`
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #2980b9;
   }
 `;
 
@@ -215,78 +229,7 @@ const Footer = styled.footer`
   }
 `;
 
-
-// Componente principal
-const HomePage = () => {
-  const attractions = [
-    {
-      id: 1,
-      name: "VUELTA AL MUNDO",
-      description: "Vuelta al Mini Mundo” Circuito Turístico en la Provincia de Huamalíes Llata - Huánuco.",
-      image: "/imag/VUELTA AL MUNDO.jpg"
-    },
-    {
-      id: 2,
-      name: "JAGRARAJ",
-      description: "Ciudadela de Jagraraj es un yacimiento arqueológico en Distrito de Llata, Provincia de Huamalíes, Departamento de Huánuco.",
-      image: "/imag/JAGRARAJ.jpg"
-    },
-    {
-      id: 3,
-      name: "CENTRO ARQUEOLOGICO DE TANTAMAYO",
-      description: "El Complejo Arqueológico de Tantamayo |Huanuco   es un conjunto de sitios arqueológicos preincas ubicado en el distrito de Tantamayo, provincia de Huamalíes, departamento de Huánuco, en Perú.",
-      image: "/imag/tantamayo.jpg"
-    }
-  ];
-
-  const testimonials = [
-    {
-      id: 1,
-      quote: "Huámalies me sorprendió con su mezcla de historia y naturaleza. ¡Volveré pronto!",
-      author: "María G. - Lima"
-    },
-    {
-      id: 2,
-      quote: "El documento resume la investigación de tres centros arqueológicos en la provincia de Huamalíes, Perú: Chapish Pariash, Huamán Huilca e Inca Nani y Jagraraj.",
-      author: "Carlos P. - Cusco"
-    },
-    {
-      id: 3,
-      quote: "El complejo arqueologico se encuentra ubicado a 7 horas de la ciudad de Huánuco en la Provincia de Huamalíes aprox.",
-      author: "Lucía M. - Arequipa"
-    }
-  ];
-
-  return (
-    <MainContainer>
-      <header>
-        <HeroContainer>
-          <h1>Descubre Huánuco</h1>
-          <p>
-            Explora los increíbles paisajes, sitios históricos y la cultura vibrante que hacen de Huánuco un destino inolvidable.
-          </p>
-          <FilterText />
-        </HeroContainer>
-        <FilterContainer>
-          <Filters />
-        </FilterContainer>
-      </header>
-
-     
-const ToggleButton = styled.button`
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-
-  &:hover {
-    background: #2980b9;
-  }
-`;
+// ------------------ COMPONENTES ------------------
 
 const TourismAttractions = ({ attractions }) => {
   const [showAttractions, setShowAttractions] = useState(false);
@@ -317,12 +260,67 @@ const TourismAttractions = ({ attractions }) => {
   );
 };
 
-export default TourismAttractions;
+const HomePage = () => {
+  const attractions = [
+    {
+      id: 1,
+      name: "VUELTA AL MUNDO",
+      description: "Vuelta al Mini Mundo” Circuito Turístico en la Provincia de Huamalíes Llata - Huánuco.",
+      image: "/imag/VUELTA AL MUNDO.jpg"
+    },
+    {
+      id: 2,
+      name: "JAGRARAJ",
+      description: "Ciudadela de Jagraraj es un yacimiento arqueológico en Distrito de Llata, Provincia de Huamalíes, Departamento de Huánuco.",
+      image: "/imag/JAGRARAJ.jpg"
+    },
+    {
+      id: 3,
+      name: "CENTRO ARQUEOLOGICO DE TANTAMAYO",
+      description: "El Complejo Arqueológico de Tantamayo es un conjunto de sitios arqueológicos preincas ubicado en el distrito de Tantamayo.",
+      image: "/imag/tantamayo.jpg"
+    }
+  ];
 
-      <Section style={{background: '#f1f5f9'}}>
+  const testimonials = [
+    {
+      id: 1,
+      quote: "Huámalies me sorprendió con su mezcla de historia y naturaleza. ¡Volveré pronto!",
+      author: "María G. - Lima"
+    },
+    {
+      id: 2,
+      quote: "El documento resume la investigación de tres centros arqueológicos en la provincia de Huamalíes.",
+      author: "Carlos P. - Cusco"
+    },
+    {
+      id: 3,
+      quote: "El complejo arqueológico se encuentra ubicado a 7 horas de la ciudad de Huánuco.",
+      author: "Lucía M. - Arequipa"
+    }
+  ];
+
+  return (
+    <MainContainer>
+      <header>
+        <HeroContainer>
+          <h1>Descubre Huánuco</h1>
+          <p>
+            Explora los increíbles paisajes, sitios históricos y la cultura vibrante que hacen de Huánuco un destino inolvidable.
+          </p>
+          <FilterText />
+        </HeroContainer>
+        <FilterContainer>
+          <Filters />
+        </FilterContainer>
+      </header>
+
+      <TourismAttractions attractions={attractions} />
+
+      <Section style={{ background: '#f1f5f9' }}>
         <h2>Nuestra Cultura</h2>
-        <p style={{maxWidth: '800px', margin: '0 auto 2rem', fontSize: '1.1rem'}}>
-        Huamalíes: Tierra de historia viva, cultura andina y espíritu resiliente..
+        <p style={{ maxWidth: '800px', margin: '0 auto 2rem', fontSize: '1.1rem' }}>
+          Huamalíes: Tierra de historia viva, cultura andina y espíritu resiliente.
         </p>
       </Section>
 
