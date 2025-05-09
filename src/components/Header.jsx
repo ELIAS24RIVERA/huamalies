@@ -5,23 +5,24 @@ import Filters from './Filters';
 import FilterText from './FilterText';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Estilos generales
+// Estilos generales mejorados
 const MainContainer = styled.div`
   font-family: 'Open Sans', sans-serif;
   max-width: 1400px;
   margin: 0 auto;
   color: #333;
+  background: #f0f2f5;
 `;
 
 const HeroContainer = styled.section`
-  background: url('/imag/llata.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/imag/llata.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   text-align: center;
   padding: 2rem;
   position: relative;
@@ -32,14 +33,14 @@ const HeroContainer = styled.section`
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 800;
     animation: fadeIn 1.5s ease-in-out;
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     max-width: 700px;
     margin-bottom: 2rem;
     animation: fadeIn 2s ease-in-out;
@@ -52,13 +53,14 @@ const HeroContainer = styled.section`
 `;
 
 const FilterContainer = styled.div`
-  padding: 2rem;
-  background-color: rgba(125, 136, 238, 0.9);
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #7d88ee, #6a75e0);
+  color: white;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  border-radius: 12px;
   max-width: 1000px;
-  margin: -50px auto 0;
+  margin: -60px auto 0;
   position: relative;
   z-index: 10;
 `;
@@ -66,9 +68,10 @@ const FilterContainer = styled.div`
 const Section = styled.section`
   padding: 4rem 2rem;
   text-align: center;
+  background: #fff;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 2rem;
     color: #2c3e50;
     position: relative;
@@ -77,11 +80,12 @@ const Section = styled.section`
     &:after {
       content: '';
       position: absolute;
-      width: 50%;
-      height: 3px;
+      width: 60%;
+      height: 4px;
       background: #3498db;
-      bottom: -10px;
-      left: 25%;
+      bottom: -12px;
+      left: 20%;
+      border-radius: 2px;
     }
   }
 `;
@@ -89,24 +93,25 @@ const Section = styled.section`
 const AttractionsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   margin-top: 2rem;
 `;
 
 const AttractionCard = styled.div`
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   }
 
   img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
   }
 
@@ -114,8 +119,9 @@ const AttractionCard = styled.div`
     padding: 1.5rem;
 
     h3 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
       color: #2c3e50;
+      font-size: 1.4rem;
     }
 
     p {
@@ -130,6 +136,12 @@ const Testimonials = styled.div`
   padding: 4rem 2rem;
   text-align: center;
 
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+  }
+
   .testimonial-container {
     display: flex;
     overflow-x: auto;
@@ -142,16 +154,21 @@ const Testimonials = styled.div`
     min-width: 300px;
     background: white;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     scroll-snap-align: start;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `;
 
 const Footer = styled.footer`
   background: #2c3e50;
   color: white;
-  padding: 3rem 2rem;
+  padding: 3.5rem 2rem;
   text-align: center;
 
   .footer-content {
@@ -165,7 +182,7 @@ const Footer = styled.footer`
     div {
       h3 {
         margin-bottom: 1rem;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
 
       ul {
@@ -181,7 +198,7 @@ const Footer = styled.footer`
             transition: color 0.3s;
 
             &:hover {
-              color: white;
+              color: #fff;
             }
           }
         }
@@ -193,8 +210,11 @@ const Footer = styled.footer`
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid #34495e;
+    font-size: 0.9rem;
+    color: #95a5a6;
   }
 `;
+
 
 // Componente principal
 const HomePage = () => {
@@ -227,12 +247,12 @@ const HomePage = () => {
     },
     {
       id: 2,
-      quote: "El documento resume la investigación de tres centros arqueológicos en la provincia de Huamalíes, Perú: Chapish Pariash, Huamán Huilca e Inca Nani y Jagraraj. ¡Volveré pronto!",
+      quote: "El documento resume la investigación de tres centros arqueológicos en la provincia de Huamalíes, Perú: Chapish Pariash, Huamán Huilca e Inca Nani y Jagraraj.",
       author: "Carlos P. - Cusco"
     },
     {
       id: 3,
-      quote: "El complejo arqueologico se encuentra ubicado a 7 horas de la ciudad de Huánuco en la Provincia de Huamalíes aprox. ¡Volveré pronto!",
+      quote: "El complejo arqueologico se encuentra ubicado a 7 horas de la ciudad de Huánuco en la Provincia de Huamalíes aprox.",
       author: "Lucía M. - Arequipa"
     }
   ];
