@@ -272,20 +272,52 @@ const HomePage = () => {
         </FilterContainer>
       </header>
 
-      <Section>
-        <h2>Atractivos Turísticos</h2>
-        <AttractionsGrid>
-          {attractions.map(attraction => (
-            <AttractionCard key={attraction.id}>
-              <img src={attraction.image} alt={attraction.name} />
-              <div>
-                <h3>{attraction.name}</h3>
-                <p>{attraction.description}</p>
-              </div>
-            </AttractionCard>
-          ))}
-        </AttractionsGrid>
-      </Section>
+     
+const ToggleButton = styled.button`
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #2980b9;
+  }
+`;
+
+const TourismAttractions = ({ attractions }) => {
+  const [showAttractions, setShowAttractions] = useState(false);
+
+  return (
+    <Section>
+      <ToggleButton onClick={() => setShowAttractions(!showAttractions)}>
+        {showAttractions ? 'Ocultar Atractivos Turísticos' : 'Ver Atractivos Turísticos'}
+      </ToggleButton>
+
+      {showAttractions && (
+        <>
+          <h2>Atractivos Turísticos</h2>
+          <AttractionsGrid>
+            {attractions.map(attraction => (
+              <AttractionCard key={attraction.id}>
+                <img src={attraction.image} alt={attraction.name} />
+                <div>
+                  <h3>{attraction.name}</h3>
+                  <p>{attraction.description}</p>
+                </div>
+              </AttractionCard>
+            ))}
+          </AttractionsGrid>
+        </>
+      )}
+    </Section>
+  );
+};
+
+export default TourismAttractions;
 
       <Section style={{background: '#f1f5f9'}}>
         <h2>Nuestra Cultura</h2>
