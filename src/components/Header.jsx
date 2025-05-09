@@ -209,7 +209,7 @@ const HomePage = () => {
       id: 2,
       name: "JAGRARAJ",
       description: "Ciudadela de Jagraraj es un yacimiento arqueológico en Distrito de Llata, Provincia de Huamalíes, Departamento de Huánuco.",
-      image: "/images/JAGRARAJ.jpg"
+      image: "/imag/JAGRARAJ.jpg"
     },
     {
       id: 3,
@@ -222,17 +222,17 @@ const HomePage = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "Huánuco me sorprendió con su mezcla de historia y naturaleza. ¡Volveré pronto!",
+      quote: "Huámalies me sorprendió con su mezcla de historia y naturaleza. ¡Volveré pronto!",
       author: "María G. - Lima"
     },
     {
       id: 2,
-      quote: "La cordillera Huayhuash es simplemente espectacular. Una experiencia inolvidable.",
+      quote: "El documento resume la investigación de tres centros arqueológicos en la provincia de Huamalíes, Perú: Chapish Pariash, Huamán Huilca e Inca Nani y Jagraraj. ¡Volveré pronto!",
       author: "Carlos P. - Cusco"
     },
     {
       id: 3,
-      quote: "La calidez de su gente y la riqueza cultural hacen de Huánuco un destino único.",
+      quote: "El complejo arqueologico se encuentra ubicado a 7 horas de la ciudad de Huánuco en la Provincia de Huamalíes aprox. ¡Volveré pronto!",
       author: "Lucía M. - Arequipa"
     }
   ];
