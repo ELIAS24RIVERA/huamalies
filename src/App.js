@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// dependencies
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// components
+import Header from './components/Header';
+import Cards from './components/Cards';
+import { FilterProvider } from './components/FilterContext';
+
+const App = () => {
+	return (
+			<FilterProvider>
+				<Header />
+				<Cards />
+			</FilterProvider>
+	);
+};
 
 export default App;
