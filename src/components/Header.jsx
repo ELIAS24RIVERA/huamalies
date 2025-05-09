@@ -305,9 +305,9 @@ const HomePage = () => {
     <MainContainer>
       <header>
         <HeroContainer>
-          <h1>Descubre Huánuco</h1>
+          <h1>Descubre Huámalies</h1>
           <p>
-            Explora los increíbles paisajes, sitios históricos y la cultura vibrante que hacen de Huánuco un destino inolvidable.
+            "Huamalíes, Cuna de la Emancipación Americana" - "Huamalíes, Capital Folclórica de la Región".
           </p>
           <FilterText />
         </HeroContainer>
