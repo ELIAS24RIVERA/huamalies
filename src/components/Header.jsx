@@ -3,11 +3,12 @@ import styled from 'styled-components';
 // CORRECCIÓN: Cambiar estas rutas por las correctas (ejemplo suponiendo que están en la misma carpeta)
 import Filters from './Filters';
 import FilterText from './FilterText';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Estilos generales
 const MainContainer = styled.div`
   font-family: 'Open Sans', sans-serif;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   color: #333;
 `;
