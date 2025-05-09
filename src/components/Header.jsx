@@ -7,14 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Estilos generales corregidos con backticks
 const MainContainer = styled.div`
   font-family: 'Open Sans', sans-serif;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   color: #333;
   background: #f0f2f5;
 `;
 
 const HeroContainer = styled.section`
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/imag/llata.jpg') center/cover no-repeat;
+  background: url('/imag/llata.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -165,7 +165,7 @@ const Testimonials = styled.div`
 `;
 
 const Footer = styled.footer`
-  background: #2c3e50;
+  background:rgb(2, 124, 245);
   color: white;
   padding: 3.5rem 2rem;
   text-align: center;
@@ -259,9 +259,9 @@ const HomePage = () => {
     <MainContainer>
       <header>
         <HeroContainer>
-          <h1>Descubre Huánuco</h1>
+          <h1>Descubre Huámalies</h1>
           <p>
-            Explora los increíbles paisajes, sitios históricos y la cultura vibrante que hacen de Huánuco un destino inolvidable.
+            "Huamalíes, Cuna de la Emancipación de Americana" "Huamalíes, Capital Folclórica de la Región Huánuco"
           </p>
           <FilterText />
         </HeroContainer>
