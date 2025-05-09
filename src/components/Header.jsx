@@ -13,8 +13,8 @@ const MainContainer = styled.div`
 `;
 
 const HeroContainer = styled.section`
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('/images/huanuco-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(253, 250, 250, 0.5), rgba(255, 252, 252, 0.5)), 
+              url('/imag/llata.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -201,21 +201,21 @@ const HomePage = () => {
   const attractions = [
     {
       id: 1,
-      name: "Kotosh",
-      description: "Templo de las Manos Cruzadas, uno de los sitios arqueológicos más antiguos del Perú.",
-      image: "/images/kotosh.jpg"
+      name: "VUELTA AL MUNDO",
+      description: "Vuelta al Mini Mundo” Circuito Turístico en la Provincia de Huamalíes Llata - Huánuco.",
+      image: "/imag/VUELTA AL MUNDO.jpg"
     },
     {
       id: 2,
-      name: "Cordillera Huayhuash",
-      description: "Paraíso para los amantes del trekking con paisajes montañosos impresionantes.",
-      image: "/images/huayhuash.jpg"
+      name: "JAGRARAJ",
+      description: "Ciudadela de Jagraraj es un yacimiento arqueológico en Distrito de Llata, Provincia de Huamalíes, Departamento de Huánuco.",
+      image: "/images/JAGRARAJ.jpg"
     },
     {
       id: 3,
-      name: "Plaza de Armas",
-      description: "Corazón de la ciudad con su catedral y arquitectura colonial.",
-      image: "/images/plaza-armas.jpg"
+      name: "CENTRO ARQUEOLOGICO DE TANTAMAYO",
+      description: "El Complejo Arqueológico de Tantamayo |Huanuco   es un conjunto de sitios arqueológicos preincas ubicado en el distrito de Tantamayo, provincia de Huamalíes, departamento de Huánuco, en Perú.",
+      image: "/imag/tantamayo.jpg"
     }
   ];
 
