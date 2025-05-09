@@ -13,8 +13,7 @@ const MainContainer = styled.div`
 `;
 
 const HeroContainer = styled.section`
-  background: linear-gradient(rgba(253, 250, 250, 0.5), rgba(255, 252, 252, 0.5)), 
-              url('/imag/llata.jpg') center/cover no-repeat;
+  background: url('/imag/llata.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -53,7 +52,7 @@ const HeroContainer = styled.section`
 
 const FilterContainer = styled.div`
   padding: 2rem;
-  background-color: rgba(247, 247, 247, 0.9);
+  background-color: rgba(125, 136, 238, 0.9);
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-radius: 8px;
@@ -270,7 +269,7 @@ const HomePage = () => {
       <Section style={{background: '#f1f5f9'}}>
         <h2>Nuestra Cultura</h2>
         <p style={{maxWidth: '800px', margin: '0 auto 2rem', fontSize: '1.1rem'}}>
-          Huánuco es una mezcla fascinante de tradiciones ancestrales y modernidad, donde podrás experimentar festivales coloridos, gastronomía única y la calidez de su gente.
+        Huamalíes: Tierra de historia viva, cultura andina y espíritu resiliente..
         </p>
       </Section>
 
