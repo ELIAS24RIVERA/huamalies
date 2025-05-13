@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Z - Inicio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Turismo</span> Huamalíes</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Inicio</a></li>
+                    <li><a href="establecimientos.html">Establecimientos</a></li>
+                    <li><a href="capacitacion.html">Capacitación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin/login.html">Administración</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Descubre Nuestro Turismo de la Provincia de Huamalies</h1>
+            <p>"La Capital Folclórica de la Región Huánuco"</p>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="container">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Ingresa tu email..." required>
+                <button type="submit" class="button_1">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <h2 class="section-title">Descubre lo mejor de nuestra región</h2>
+            <p class="section-subtitle">Experiencias únicas que no te puedes perder</p>
+            
+            <div class="services-grid">
+                <!-- Hotel Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="./imag/hotel.jpg" alt="Hotel de lujo" loading="lazy" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Hoteles Premium</h3>
+                        <p>Alojamientos exclusivos para una estadía inolvidable</p>
+                        <a href="#" class="card-button">Ver opciones <span>→</span></a>
+                    </div>
+                </div>
+                
+                <!-- Restaurant Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="./imag/restaurante.jpg" alt="Gastronomía local" loading="lazy" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Gastronomía Local</h3>
+                        <p>Sabores auténticos que deleitarán tu paladar</p>
+                        <a href="#" class="card-button">Descubrir menús <span>→</span></a>
+                    </div>
+                </div>
+                
+                <!-- Archeological Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="./imag/arquiologico.jpg" alt="Sitio arqueológico" loading="lazy" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Patrimonio Cultural</h3>
+                        <p>Explora los misterios de nuestras civilizaciones ancestrales</p>
+                        <a href="#" class="card-button">Conocer tours <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section id="paquetes">
+            <h2>Paquetes Turísticos</h2>
+            <div class="paquete">
+                <h3>Centro Arquiologico de Tantamayo</h3>
+                <p>3 días y 2 noches - Desde $12</p>
+                <button onclick="seleccionar('Centro Arquiologico de Tantamayo')">Ver más</button>
+            </div>
+            <div class="paquete">
+                <h3>Bosques de piedras de Huamash</h3>
+                <p>5 días y 4 noches - Desde $600</p>
+                <button onclick="seleccionar('Bosques de piedras de Huamash')">Ver más</button>
+            </div>
+            <div class="paquete">
+                <h3>Vuelta al Mundo de Rondos - Llata</h3>
+                <p>2 días y 1 noche - Desde $250</p>
+                <button onclick="seleccionar('Vuelta al Mundo de Rondos - Llata')">Ver más</button>
+            </div>
+            </section>
+
+            <section id="reserva">
+            <h2>Reserva tu viaje</h2>
+            <form id="formularioReserva">
+                <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="text" id="destino" placeholder="Destino seleccionado" readonly required>
+                <button type="submit">Reservar</button>
+                <p id="mensaje"></p>
+            </form>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <p>Turismo Huamalíes &copy; 2025</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

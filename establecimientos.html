@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establecimientos Turísticos - Región Z</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/establecimientos.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Turismo</span>Huamalíes</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="current"><a href="establecimientos.html">Establecimientos</a></li>
+                    <li><a href="capacitacion.html">Capacitación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin/login.html">Administración</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">Establecimientos Turísticos</h1>
+                
+                <div class="filtros">
+                    <h3>Filtrar por:</h3>
+                    <select id="filtro-tipo">
+                        <option value="todos">Todos los tipos</option>
+                        <option value="hotel">Hoteles</option>
+                        <option value="restaurante">Restaurantes</option>
+                        <option value="tour">Tours</option>
+                        <option value="hostal">Hostales</option>
+                        <option value="atraccion">Atracciones</option>
+                    </select>
+                    
+                    <select id="filtro-zona">
+                        <option value="todas">Todas las zonas</option>
+                        <option value="norte">Zona Norte</option>
+                        <option value="sur">Zona Sur</option>
+                        <option value="este">Zona Este</option>
+                        <option value="oeste">Zona Oeste</option>
+                        <option value="centro">Centro</option>
+                    </select>
+                    
+                    <input type="text" id="filtro-busqueda" placeholder="Buscar por nombre...">
+                    <button class="button_1" id="btn-buscar">Buscar</button>
+                </div>
+                
+                <div id="lista-establecimientos">
+                    <!-- Los establecimientos se cargarán dinámicamente con JS -->
+                </div>
+            </article>
+
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>Mapa de Establecimientos</h3>
+                    <div id="mapa-establecimientos">
+                        <!-- Aquí iría la integración con Google Maps -->
+                        <img src="img/mapa-placeholder.jpg" alt="Mapa de establecimientos" style="width:100%">
+                    </div>
+                    <h3>Estadísticas</h3>
+                    <p>Total establecimientos: <span id="total-establecimientos">0</span></p>
+                    <p>Hoteles: <span id="total-hoteles">0</span></p>
+                    <p>Restaurantes: <span id="total-restaurantes">0</span></p>
+                    <p>Tours: <span id="total-tours">0</span></p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section id="detalle-establecimiento-modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <div class="modal-body">
+                <div class="modal-imagen">
+                    <img id="modal-imagen" src="" alt="Imagen del establecimiento">
+                </div>
+                <div class="modal-info">
+                    <p><strong>Tipo:</strong> <span id="modal-tipo"></span></p>
+                    <p><strong>Dirección:</strong> <span id="modal-direccion"></span></p>
+                    <p><strong>Teléfono:</strong> <span id="modal-telefono"></span></p>
+                    <p><strong>Email:</strong> <span id="modal-email"></span></p>
+                    <p><strong>Horario:</strong> <span id="modal-horario"></span></p>
+                    <p><strong>Clasificación:</strong> <span id="modal-clasificacion"></span></p>
+                    <p><strong>Descripción:</strong> <span id="modal-descripcion"></span></p>
+                    <p><strong>Responsable:</strong> <span id="modal-responsable"></span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="button_1" id="btn-web">Visitar Sitio Web</button>
+                <button class="button_1" id="btn-ruta">Cómo llegar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Turismo Huamalíes &copy; 2023</p>
+    </footer>
+
+    <script src="js/establecimientos.js"></script>
+</body>
+</html>

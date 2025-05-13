@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Z - Administración</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Turismo</span> Z - Admin</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="gestion-establecimientos.html">Establecimientos</a></li>
+                    <li><a href="gestion-responsables.html">Responsables</a></li>
+                    <li><a href="gestion-capacitaciones.html">Capacitaciones</a></li>
+                    <li><a href="../../index.html">Salir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h2 class="page-title">Panel de Administración</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-box">
+                        <h3>Establecimientos Registrados</h3>
+                        <p id="total-establecimientos">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Capacitaciones Programadas</h3>
+                        <p id="total-capacitaciones">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Responsables Activos</h3>
+                        <p id="total-responsables">0</p>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Actividad Reciente</h3>
+                    <ul id="activity-list">
+                        <!-- Se llenará dinámicamente con JS -->
+                    </ul>
+                </div>
+            </article>
+
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>Acciones Rápidas</h3>
+                    <button class="button_1" onclick="location.href='gestion-establecimientos.html'">Registrar Establecimiento</button>
+                    <button class="button_1" onclick="location.href='gestion-capacitaciones.html'">Programar Capacitación</button>
+                    <button class="button_1" onclick="location.href='gestion-responsables.html'">Asignar Responsable</button>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <p>Turismo Región Z - Sistema de Administración &copy; 2023</p>
+    </footer>
+
+    <script src="../../js/gestion.js"></script>
+</body>
+</html>

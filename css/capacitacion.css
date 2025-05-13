@@ -1,0 +1,242 @@
+/* Estilos específicos para la página de capacitación */
+
+#main {
+    padding: 20px 0;
+}
+
+.page-title {
+    color: #35424a;
+    margin-bottom: 20px;
+}
+
+.intro-capacitacion {
+    background: #f8f8f8;
+    padding: 15px;
+    border-left: 4px solid #e8491d;
+    margin-bottom: 20px;
+}
+
+.filtros-capacitacion {
+    background: #e6e6e6;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.filtros-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.filtros-capacitacion select, 
+.filtros-capacitacion input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+#calendario-capacitaciones {
+    margin-top: 30px;
+}
+
+#calendario-capacitaciones h2 {
+    color: #35424a;
+    border-bottom: 2px solid #e8491d;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#lista-capacitaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.capacitacion-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.capacitacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.capacitacion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.capacitacion-tipo {
+    display: inline-block;
+    background: #35424a;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.capacitacion-fecha {
+    font-weight: bold;
+    color: #e8491d;
+}
+
+.capacitacion-estado {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.estado-proxima {
+    background: #ffc107;
+    color: #000;
+}
+
+.estado-en-curso {
+    background: #28a745;
+    color: #fff;
+}
+
+.estado-finalizada {
+    background: #6c757d;
+    color: #fff;
+}
+
+.capacitacion-body h3 {
+    margin-top: 0;
+    color: #35424a;
+}
+
+.btn-inscribirse {
+    display: inline-block;
+    background: #e8491d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.beneficios-capacitacion {
+    margin-top: 40px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.beneficios-capacitacion h2 {
+    color: #35424a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.beneficios-capacitacion ul {
+    padding-left: 20px;
+}
+
+.beneficios-capacitacion li {
+    margin-bottom: 8px;
+}
+
+/* Estadísticas */
+.estadistica-item {
+    margin-bottom: 15px;
+}
+
+.estadistica-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.estadistica-item h4 {
+    margin: 5px 0 0 0;
+    color: #e8491d;
+}
+
+.pasos-participacion {
+    padding-left: 20px;
+}
+
+.pasos-participacion li {
+    margin-bottom: 8px;
+}
+
+/* Modal capacitación */
+.modal-info-capacitacion {
+    flex: 2;
+}
+
+.modal-inscripcion {
+    flex: 1;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.modal-descripcion {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group select, 
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filtros-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #lista-capacitaciones {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    .modal-inscripcion {
+        margin-top: 20px;
+    }
+}
