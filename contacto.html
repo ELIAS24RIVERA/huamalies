@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Turismo [Destino]</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <header>
+        <h1>Contacto de Turismo</h1>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h2>📌 Oficina de Turismo</h2>
+            <ul>
+                <li><strong>Dirección:</strong> Av. Principal #123, Llata, Huanuco</li>
+                <li><strong>Teléfono:</strong> +51 923 154 568</li>
+                <li><strong>Email:</strong> contacto@turismohuamalies.com</li>
+                <li><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00</li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <h2>✉️ Envíanos un mensaje</h2>
+            <form id="turismoForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto">
+                        <option value="consulta">Consulta General</option>
+                        <option value="reserva">Reserva de Tours</option>
+                        <option value="emergencia">Emergencia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            <div id="mensajeExito" class="mensaje-exito"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Turismo [Destino]. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
